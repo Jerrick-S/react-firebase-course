@@ -55,7 +55,7 @@ function App() {
 
   const uploadFile = async () => {
     if (!fileUpload) return;
-    const filesFolderRef = ref(storage, 'projectFiles/${fileUpload.name}');
+    const filesFolderRef = ref(storage, "projectFiles/${fileUpload.name}");
     try {
       await uploadBytes(filesFolderRef, fileUpload);
     } catch (err) {
